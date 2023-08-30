@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:20px;
+    min-height: 100vh;
+    background: linear-gradient(to right,#041308,#330b10)
+}
+.heading{
+    font-size:3rem;
+    color:orangered;
+    text-align: center;
+}
+.subheading{
+    color:white;
+    font-size:1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+
+.text{
+        flex-basis: 30%;
+    }
+}
+.gallery{
+    flex-basis:250%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-auto-rows: 120px;
+    gap:5px;
+    
+}
+.box{
+    background-size:cover;
+    background-position:center;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+    animation-name: color;
+    animation-duration: 5s;
+    
+
+
+}
+
+.row-2{
+grid-area:span 2;
+}
+
+
+.col-2{
+    grid-area:span 2;
+}
+
+.box:hover{
+    box-shadow: 0 0 4px #fff;
+    background-color: #999;
+    cursor: pointer;
+    background-position:top;
+}
+@keyframes color  {
+    from{
+        transform: rotate(0drg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+/* @keyframes color{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    25%{
+        transform:translate(200px,0);
+    }
+    50%{
+        transform:translate(200px,200px);
+
+    }
+    75%{
+        transform:translate(0,200px);
+    }
+} */
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="text">
+        <h1 class="heading">I <span>Aditya</span></h1>
+          <p class="subheading">I Used to Develop website inorder to Improve The website</p>
+       </div>    
+        <div class="gallery">
+        <div class="box row-2 " id ="box-1" style="background-image:url(https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405_1280.jpg);">Thunder</div>
+
+        <div class="box " style="background-image:url(https://cdn.pixabay.com/photo/2017/05/08/13/15/spring-bird-2295434_1280.jpg);">Bird</div>
+        <div class="box col-2" style="background-image:url(https://cdn.pixabay.com/photo/2016/11/14/04/36/boy-1822614_1280.jpg);">man</div>
+        <div class="box " style="background-image:url(https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_1280.jpg);">mountain</div>
+        <div class="box row-2" style="background-image:url(https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079_1280.jpg);">tree</div>
+        <div class="box  "style="background-image:url(https://cdn.pixabay.com/photo/2016/10/14/22/52/tiger-1741443_1280.jpg);">tiger</div>
+        <div class="box col-2"style="background-image:url(https://cdn.pixabay.com/photo/2023/02/17/19/59/dog-7796822_1280.jpg);">dog</div>
+        <div class="box" style="background-image:url(https://cdn.pixabay.com/photo/2016/10/12/02/56/girl-1733352_1280.jpg);">girl</div>
+        </div>
+    </div>
+</body>
+</html>
